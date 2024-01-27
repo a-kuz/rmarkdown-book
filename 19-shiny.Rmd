@@ -1,307 +1,371 @@
-# Shiny Documents
 
-We have briefly introduced Shiny\index{Shiny} documents in Section \@ref(intro-shiny). Shiny is a very powerful framework for building web applications based on R. It is out of the scope of this book to make a comprehensive introduction to Shiny (which is too big a topic). We recommend that readers who are not familiar with Shiny learn more about it from the website https://shiny.rstudio.com before reading this chapter.
+>
+> Put in your css file or directly in rmarkdown
 
-Unlike the more traditional workflow of creating static reports, you can create documents that allow your readers to change the parameters underlying your analysis and see the results immediately in Shiny R Markdown documents. In the example shown in Figure \@ref(fig:shiny), the histogram will be automatically updated to reflect the number of bins selected by the reader.
+<style>
+  .column {
+    columns: 2 300px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 300px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
 
-A picture is worth a thousand words, and a Shiny document can potentially show you a thousand pictures as you interact with it. The readers are no longer tied to the fixed analysis and conclusions in the report. They may explore other possibilities by themselves, and possibly make new discoveries or draw different conclusions.
+  }
+</style>
 
-## Getting started {#shiny-start}
+___
+>
+🤨 здравствуйте Как получить виртуальную карту?
 
-You can turn any _HTML-oriented_ R Markdown documents to Shiny documents by adding `runtime: shiny` to the YAML metadata as a _top-level_ field, e.g.,
+:::row:::
+:::column:::
 
-```yaml
----
-title: "Shiny Document"
-output: html_document
-runtime: shiny
----
-```
+🧑‍💼 Human
 
-Note that the output format of the R Markdown document must be an HTML format. That is, the document should generate a web page (a `*.html` file). Non-HTML formats such as `pdf_document` and `word_document` will not work with the Shiny runtime. Please also note that some presentation formats are also HTML formats, such as `ioslides_presentation` and `slidy_presentation`.
+<small>💬 message</small>
 
-You can also create a new Shiny document from the RStudio menu `File -> New File -> R Markdown`, and choose the document type "Shiny" (see Figure \@ref(fig:shiny-new-document)).
+     Здравствуйте! Чем я могу Вам помочь? Просьба подождать несколько минут. Спасибо за ожидание. В связи с особенностями банковского законодательства и правилами международных платежных систем, на данный момент.  мы не можем предложить резидентам стран вне ЕЭЗ выпустить платёжную карту ( в виртуальном и пластиковом виде ). Однако, одним из наших актуальных приоритетов является решение этой проблемы и получение необходимых разрешений. Мы проинформируем Вас как только заказ карт для клиентов из Вашей страны станет доступен. Вам доступен счёт в формате европейского IBAN – это счета для получения и отправки платежей в зоне SEPA (Единая Зона Платежей в Евро). Также Вам доступен интегрированный криптовалютный сервис от наших партнеров. Вы можете использовать его для покупки и продажи криптовалюты, а также для пополнения и вывода денежных средств Вашего счета в Blackcatcard. С более подробной информацией по данному сервису Вы можете ознакомиться на сайте наших партнёров https://www.maner.io// Есть ли у Вас ещё вопросы, на которые я могу ответить в данный момент? Если у Вас возникнут ещё вопросы, пишите нам в любое время! Хорошего дня!
+    :::column-end:::
+    :::column:::
+🧠  GPT
+     <small>💬 message</small>
 
-```{r shiny-new-document, echo=FALSE, fig.cap='Create a new Shiny document in RStudio.', out.width='100%'}
-knitr::include_graphics('images/shiny-new-document.png', dpi = NA)
-```
+Virtual card is created immediately after successful registration and you can start using it. The virtual card allows for all operations except for offline purchases (using a POS terminal) and cash withdrawals from ATM. The virtual card is activated automatically after successful registration.
 
-To run a Shiny document in RStudio, you need to click the button "Run Document" on the editor toolbar (RStudio will automatically replace the "Knit" button with "Run Document" when it detects a Shiny document). If you do not use RStudio, or want to run the document in the R console for troubleshooting, you can call the function `rmarkdown::run()` and pass the filename to it.
+<small>🛠️ KNOWLEDGE tuning \(скрипты\)</small>
 
-You can embed Shiny inputs and outputs in your document. Outputs are automatically updated whenever inputs change. In the following example, we create a numeric input (`numericInput`) with the name `rows`, and then refer to its value via `input$rows` when generating output:
+"The virtual card is created immediately after successful registration and you can start using it. With the virtual card, all operations are possible except for offline purchases (using a POS terminal) and cash withdrawals from ATM. Virtual card is activated automatically after successful registration"【7†source】.
 
-````markdown
-`r ''````{r, echo=FALSE}
-numericInput("rows", "How many cars?", 5)
+> ACTIONS
 
-renderTable({
-  head(cars, input$rows)
-})
-```
-````
+- No further actions required.
 
-```{r shiny-table, echo=FALSE, fig.cap='Increase the number of rows in the table in a Shiny document.', out.width='100%'}
-knitr::include_graphics('images/shiny-table.png', dpi = NA)
-```
+> SELFSCORING
 
-In the above example, the output code was wrapped in a call to `renderTable()`. There are many other render functions in Shiny that can be used for plots, printed R output, and more. This example uses `renderPlot()` to create dynamic plot output:
+★★★★★★★★★☆
+<small> >>> Virtual card is created immediately after successful registration and you can start using it. With virtual card all operations are possible except for offline purchases (using a POS terminal) and cash withdrawals from ATM.
 
-````markdown
-`r ''````{r, echo=FALSE}
-sliderInput("bins", "Number of bins:", 30, min = 1, max = 50)
+# 【1†Knowledge.docx†file-xzKdLMm3oLtV0K3WrTYzVyCA】
 
-renderPlot({
-  x    = faithful[, 2]  # Old Faithful Geyser data
-  bins = seq(min(x), max(x), length.out = input$bins + 1)
+Standard delivery by simple letter is up to 15 business days to EU countries and up to 20 business days to other countries." Cards Main сard/Основная карта 4. Do I have to activate my Main card? "Virtual card is activated automatically after successful registration. To activate a plastic card after receiving it you need to click on the picture of the card. A tab will open with the button: ""Activate card"". Click on this button
+</small>
 
-  # draw the histogram with the specified number of bins
-  hist(x, breaks = bins, col = 'darkgray', border = 'white')
-})
-```
-````
+:::column-end:::
+:::row-end:::
 
-```{r shiny-plot, echo=FALSE, fig.cap='Change the number of bins of a histogram in a Shiny document.', out.width='100%'}
-knitr::include_graphics('images/shiny-plot.png', dpi = NA)
-```
+___
+> 🤬 добрый вечер подскажите - пытаюсь сделать перевод по карте. перевожу на карту виза Испания. когда ввожу номер карты - выдает ошибку не верный номер карты. но ошибок в номере нет
 
-## Deployment {#shiny-deploy}
+:::row:::
+:::column:::
 
-Shiny documents must be supported by a live R session running behind the scenes. When you run a Shiny document locally, it uses your local R session. Usually only you can see and interact with the document. If you want to share the document with people who do not have R installed, or do not want to run the document locally, you will have to deploy the document on a server, and share the URL of the document. Then other people only need a web browser to visit your document.
+🧑‍💼 Human
 
-There are two ways to deploy a Shiny document. You can either use a hosted service provided by RStudio, or set up your own server. The first way is technically easier, but sometimes you may not be allowed to use an external hosted service, so you have to install the required software (Shiny Server or RStudio Connect)\index{Shiny Server}\index{RStudio Connect} on your own server to deploy the Shiny documents.
+<small>💬 message</small>
 
-### ShinyApps.io
+     Добрый вечер! Чем я могу Вам помочь? Please, wait a few minutes in the chat. Извините за предыдущее сообщение. Пожалуйста, подождите несколько минут в чате. Спасибо за ожидание! Переводы на карту возможны только между владельцами Blackcatcard, в другие банки переводы по номеру карты недоступны. Вы можете сделать SEPA перевод. Это платежные перечисления в валюте евро, осуществляемые между всеми странами ЕЭЗ (Австрия, Бельгия, Болгария, Венгрия, Германия, Греция, Дания, Ирландия, Исландия, Испания, Италия, Кипр, Латвия, Литва, Лихтенштейн, Люксембург, Мальта, Нидерланды, Норвегия, Польша, Португалия, Румыния, Словакия, Словения, Финляндия, Франция, Хорватия, Чехия, Швеция, Эстония), а также Андоррой, Великобританией, Монако, Сан-Марино и Швейцарией. Перечисления возможны со счетов в формате IBAN; срочность перечисления - стандартная.
+    :::column-end:::
+    :::column:::
+🧠  GPT
+     <small>💬 message</small>
 
-You can publish Shiny documents to the ShinyApps (https://shinyapps.io) hosted service. To do this you, should ensure that you have:
+Для решения проблемы с ошибкой при вводе номера карты просим вас обратить внимание на системные уведомления и корректно заполнить поля, выделенные красным цветом.
 
-1. An account on ShinyApps (use the signup form to request an account).
+<small>🛠️ KNOWLEDGE tuning \(скрипты\)</small>
 
-2. A latest version of the **rsconnect** R package. You can install this as follows:
+Используемый фрагмент из базы знаний: "Read system alerts. Correct the values in the fields highlighted in red"【9†source】.
 
-    ```r
-    install.packages("rsconnect")
-    ```
+> ACTIONS
 
-You can then deploy an interactive Shiny document in the same way that you currently deploy normal Shiny applications. From the working directory containing the document(s), just execute:
+- request data from the client (specify what): Просьба предоставить точное описание ошибки, которое появляется при вводе номера карты, чтобы мы могли вам помочь.
 
-```r
-rsconnect::deployApp()
-```
+> SELFSCORING
 
-If you are using RStudio, you can also use the `Publish` button available at the top-right of the window when running a Shiny document (see Figure \@ref(fig:shiny-deploy)).
+★★★★★★★★☆☆
+<small> >>> I receive errors when filling in the payment fields. What should I do? Read system alerts. Correct the values in the fields highlighted in red
+</small>
 
-```{r shiny-deploy, echo=FALSE, fig.cap='Deploy a Shiny document to ShinyApps.io.', out.width='100%'}
-knitr::include_graphics('images/shiny-deploy.png', dpi = NA)
-```
+:::column-end:::
+:::row-end:::
 
-If there is a file named `index.Rmd` in the directory, it will be served as the default document for that directory, otherwise an explicit path to the Rmd file should be specified in the URL if you want to visit this Rmd document. For example, the URL for `index.Rmd` deployed to ShinyApps may be of the form `https://example.shinyapps.io/appName/`, and the URL for `test.Rmd` may be of the form `https://example.shinyapps.io/appName/test.Rmd`.
+___
+> 😤 Hello  can i use the card in the app menu as a virtual card
 
-### Shiny Server / RStudio Connect
+:::row:::
+:::column:::
 
-Both Shiny Server (https://www.rstudio.com/products/shiny/shiny-server/) and RStudio Connect (https://www.rstudio.com/products/connect/) can be used to publish Shiny documents. They require knowledge about Linux. Installing and configuring them should normally be a task for your system administrator if you are not familiar with Linux or do not have the privilege.
+🧑‍💼 Human
 
-## Embedded Shiny apps {#shiny-embedded}
+<small>💬 message</small>
 
-Besides embedding individual Shiny inputs and outputs in R Markdown, it is also possible to embed a standalone Shiny application within a document. There are two ways to do this:
+     Hello! Please specify last 4 digits of the card.
+    :::column-end:::
+    :::column:::
+🧠  GPT
+     <small>💬 message</small>
 
-1. Defining the application inline using the `shinyApp()` function; or
+The card displayed within the app menu can be used as a virtual card for all transactions excluding purchases in physical stores or cash withdrawals at ATMs.
 
-1. Referring to an external application directory using the `shinyAppDir()` function.
+<small>🛠️ KNOWLEDGE tuning \(скрипты\)</small>
 
-Both functions are available in the **shiny** package (not **rmarkdown**), which will be automatically loaded when `runtime: shiny` is specified in the YAML metadata of the document, so you do not have to call `library(shiny)` to load **shiny** (although it does not hurt if you load a package twice).
+"The virtual card can be used for all transactions except for purchases in the stores or cash withdrawals in the ATM."【7†source】.
 
-### Inline applications {#shiny-embed-inline}
+> ACTIONS
 
-This example uses an inline definition:
+- No further action required.
 
-````markdown
-`r ''````{r, echo=FALSE}
-shinyApp(
+> SELFSCORING
 
-  ui = fluidPage(
-    selectInput("region", "Region:",
-                choices = colnames(WorldPhones)),
-    plotOutput("phonePlot")
-  ),
+★★★★★★★★☆☆
+<small> >>> The virtual card can be used for all transactions except for purchases in the stores or cash withdrawals in the ATM
+</small>
 
-  server = function(input, output) {
-    output$phonePlot = renderPlot({
-      barplot(WorldPhones[,input$region]*1000,
-              ylab = "Number of Telephones", xlab = "Year")
-    })
-  },
+:::column-end:::
+:::row-end:::
 
-  options = list(height = 500)
-)
-```
-````
+___
+> 🤨 can i use my card with iphone before it has arrived
 
-Note the use of the `height` parameter to determine how much vertical space the embedded application should occupy.
+:::row:::
+:::column:::
 
-### External applications
+🧑‍💼 Human
+<small>💬 message</small>
 
-This example embeds a Shiny application defined in another directory:
+     Hello! Please specify last 4 digits of the card.
+    :::column-end:::
+    :::column:::
+<gray>🧠  GPT</gray>
+     <right><small>💬 message</small></right>
 
-````markdown
-`r ''````{r, echo = FALSE}
-shinyAppDir(
-  system.file("examples/06_tabsets", package="shiny"),
-  options = list(width = "100%", height = 700)
-)
-```
-````
+You can start using the virtual card feature automatically after successful registration in the BlackCatCard mobile application. While you wait for the arrival of the plastic card, the virtual card is fully functional and can be used for online purchases and other transactions where a physical card is not required.
 
-Note that in all of R code chunks above, the chunk option `echo = FALSE` is used. This is to prevent the R code within the chunk from rendering to the output document alongside the Shiny components.
+<small>🛠️ KNOWLEDGE tuning \(скрипты\)</small>
 
-## Shiny widgets {#shiny-widgets}
+The information is based on the premise that a virtual card is activated automatically upon successful registration【9†source】.
 
-Shiny widgets\index{Shiny widget} enable you to create re-usable Shiny components that are included within an R Markdown document using a single function call. Shiny widgets can also be invoked directly from the console (useful during authoring) and show their output within the RStudio Viewer pane or an external web browser.
+> ACTIONS
 
-### The `shinyApp()` function
+No further actions are required at this time.
 
-At their core, Shiny widgets are mini-applications created using the `shinyApp()` function. Rather than creating a `ui.R` and `server.R` (or `app.R`) as you would for a typical Shiny application, you pass the UI and server definitions to the `shinyApp()` function as arguments. We have given an example in Section \@ref(shiny-embed-inline).
+> SELFSCORING
 
-The simplest type of Shiny widget is just an R function that returns a `shinyApp()`.
+★★★★★★★★☆☆
+<small> >>> Virtual card is activated automatically after successful registration. To activate a plastic card after receiving it you need to click on the picture of the card. A tab will open with the button: ""Activate card"". Click on this button.
+BCC app: Next by entering your PIN code for authorization confirm the card's activation.
+Gekkard I-bank: Next you will receive on your phone an SMS with an activation code. Enter the code in the window that opens.
+Sign this card on the back side."
+Cards Preissued сard/Предвыпущенная карта 1. What is a preissued Blackcatcard card? "This is a Blackcatcard card without a name of the cardholder indicated on it. The card is handed to the customer prior the registration in the system but it's usage at this step is impossible. In order for the card to become available for use it is necessary to download the mobile app register and being verified after which it will be possible to use the card.
+Please note that the functionality of the payment card is available only for the customers who indicated during the registration and confirmed their residential address in one of the EEA countries."
+Cards Preissued сard/Предвыпущенная карта 2. Can I register with a preissued card and open an account with functionality of payment card if I am not an EEA resident? No as the functionality of the payment card is available only for the residents of one of the EEA countries. In order to open an account with functionality of payment card you need to indicate during the registration an address in one of the EEA countries and confirm this address with documents.
+Cards Preissued сard/Предвыпущенная карта 3. I received a preissued card. On which step of registration should I enter the card data? "When registering after being acquainted with the legal agreements and confirming your phone number you will be redirected to the next step where you need to choose one of two options: ""Register and get Blackcatcard by mail"" or ""Just register. I've got the card already."" Choose the second option if you have a preissued card. On the following page you will be asked to enter the card's number. Enter it to proceed to the next step of registration."
+Cards Preissued сard/Предвыпущенная карта 4. What is the difference between a card issued after registration and a preissued one? "Main differences are the following:
 
-### Example: k-Means clustering
+- A preissued plastic card is handed to the customer prior the registration in the system. After successful registration and activation of the card its functionality becomes available for purchases in the stores and cash withdrawals. During the regular registration the client needs to wait for the issue and delivery of a plastic card to his region only after which he will be able to use the plastic card functionality;
+- A preissued card contains no name of the cardholder indicated on it. During the regular registration the name on the card will be displayed as it was indicated by the customer during the registration. "
+  Cards Preissued сard/Предвыпущенная карта 5. After registering with preissued card will I be able to make online purchases? Yes of course. Virtual card is activated automatically after successful registration
+  </small>
 
-The **rmdexamples** package (https://github.com/rstudio/rmdexamples) includes an example of a Shiny widget implemented in this fashion. The `kmeans_cluster()` function takes a single `dataset` argument and returns a Shiny widget to show the result of k-Means clustering. You can use it within an R Markdown document like this:
+:::column-end:::
+:::row-end:::
 
-````markdown
-`r ''````{r, echo = FALSE}
-library(rmdexamples)
-kmeans_cluster(iris)
-```
-````
+___
+> 😤 hello i want to change my phone number actual phone number +33757509605 i want to change for +33757842559 thanks
 
-Figure \@ref(fig:shiny-widget-kmeans) shows what the widget looks like inside a running document.
+:::row:::
+:::column:::
 
-```{r shiny-widget-kmeans, echo=FALSE, fig.cap='A Shiny widget to apply k-Means clustering on a dataset.', out.width='100%'}
-knitr::include_graphics('images/shiny-widget-kmeans.png', dpi = NA)
-```
+🧑‍💼 Human
 
-Below is the source code of the `kmeans_cluster()` function:
+<small>💬 message</small>
 
-```r
-kmeans_cluster = function(dataset) {
+     Hello! Please, hold on for several minutes. Thank you for waiting. Dear customer, we want to inform you that when changing the phone number, you might be requested to provide additional documents, and the existing correspondence with the financial institution, along with your personal templates, will be lost. After changing the phone number, you will begin receiving SMS to enter the app and confirm operations to the new number. Please note that changing the phone number may cause slight problems in receiving the SMS intended for authorization. This may happen due to possible issues on the electronic service providers' side, whose systems we use to send those SMS. Do you agree to continue the phone number change procedure?
+    :::column-end:::
+    :::column:::
+🧠  GPT
+     <small>💬 message</small>
 
-  library(shiny)  
-  vars = names(dataset)
+To update your phone number, please follow these steps: Select your country and enter your new mobile phone number without the country code, as it will be automatically set when you select your country. Then click on the "Next" button to proceed.
 
-  shinyApp(
-    ui = fluidPage(
-      fluidRow(style = "padding-bottom: 20px;",
-        column(4, selectInput('xcol', 'X Variable', vars)),
-        column(4, selectInput('ycol', 'Y Variable', vars,
-                              selected = vars[2])),
-        column(4, numericInput('clusters', 'Cluster count', 3,
-                               min = 1, max = 9))
-      ),
-      fluidRow(
-        plotOutput('kmeans', height = "400px")  
-      )
-    ),
+<small>🛠️ KNOWLEDGE tuning \(скрипты\)</small>
 
-    server = function(input, output, session) {
+To proceed with such a request, the following content from the knowledge base is applicable: "How to indicate the phone number? Select your country and enter your mobile phone number. Please note that the country code will be automatically set when you select your country so the phone number must be entered without the country code. Then click on the 'Next' button."【9†source】.
 
-      # Combine the selected variables into a new data frame
-      selectedData = reactive({
-        dataset[, c(input$xcol, input$ycol)]
-      })
+> ACTIONS
 
-      clusters = reactive({
-        kmeans(selectedData(), input$clusters)
-      })
+- request data from the client (please provide your full name and the old phone number for verification)
+- refer the question to a specialist to assist with changing the phone number
 
-      output$kmeans = renderPlot(height = 400, {
-        res = clusters()
-        par(mar = c(5.1, 4.1, 0, 1))
-        plot(selectedData(),
-             col = res$cluster, pch = 20, cex = 3)
-        points(res$centers, pch = 4, cex = 4, lwd = 4)
-      })
-    },
+> SELFSCORING
 
-    options = list(height = 500)
-  )
-}
-```
+★★★★★★★★☆☆
+<small> >>> How to indicate the phone number? "Select your country and enter your mobile phone number. Please note that the country code will be automatically set when you select your country so the phone number must be entered without the country code. Then click on the ""Next"" button. "
+Registration Authorization data and status 10. How to continue the incomplete registration? "After entering the SMS code click on the ""Continue registration"" button and follow the on-screen instructions."
+Registration Authorization data and status 11. After entering the code from SMS a new screen opens where I have to select one of two options: «Register and get Blackcatcard per mail» or «Just register I’ve got the card already». What should I choose? "Choose the second option if you have a preissued card. On the following page you will be asked to enter the card's number. If you don’t have preissued card then choose the first option.
+Please note that the functionality of the payment card is available only for the customers who indicated during the registration and confirmed their residential address in one of the EEA countries."
+Registration Authorization data and status "12. Why do I get a ""The phone number does not match with authentication token phone"" error during the registration/authorization?" Please check that your phone number is entered correctly. You may have put an extra 0 (zero) between the country code and your number when entering your phone number.
+Registration Authorization data and status 13. I can’t request a code for registration (the technical number is highlighted in red/is not sent). Customer indicated Yemen's phone number (+96
+</small>
 
-### Widget size and layout
+:::column-end:::
+:::row-end:::
 
-Shiny widgets may be embedded in various places including standard full width pages, smaller columns within pages, and even HTML5 presentations. For the widget size and layout to work well in all of these contexts, we recommend that the total height of the widget is no larger than 500 pixels. This is not a hard and fast rule, but HTML5 slides can typically only display content less than 500px in height, so if you want your widget to be usable within presentations, this is a good guideline to follow.
+___
+> 😤 здравствуйте у меня возникла проблема я хотел бы изменить номер так как уезжаю за границу я могу это сделать для пользования приложениям?
 
-You can also add an explicit `height` argument to the function that creates the widget (default to 500 so it works well within slides).
+:::row:::
+:::column:::
 
-## Multiple pages {#shiny-multiple}
+🧑‍💼 Human
 
-You can link to other Shiny documents by using the Markdown link syntax and specifying the *relative* path to the document, e.g., `[Another Shiny Document](another.Rmd)`. If you click the link to another Rmd document on one page, that Rmd document will be launched as the current interactive Shiny document.
+<small>💬 message</small>
 
-Currently, only one document can be active at a time, so documents cannot easily share state, although some primitive global sharing is possible via the R script `global.R` (see the help page `?rmarkdown::run`).
+     Здравствуйте! Вы можете сменить номер телефона, привязанный к Вашему счету. Пожалуйста, подождите несколько минут в чате. Спасибо за ожидание. Хотим проинформировать, что при смене номера телефона у Вас могут быть запрошены дополнительные документы, а имеющаяся переписка с финансовым учреждением и шаблоны будут утеряны. После смены номера телефона, СМС для входа в приложение и подтверждения операций будут приходить уже на новый номер телефона. Обращаем Ваше внимание, что после смены номера телефона возможны проблемы, связанные с получением СМС для авторизации, ввиду неполадок на стороне независимых от нас сервисов электронных провайдеров, чьей системой мы пользуемся для отправления данных СМС. Вы согласны продолжить процедуру смены номера телефона?
+    :::column-end:::
+    :::column:::
+🧠  GPT
+     <small>💬 message</small>
 
-By default, it is only possible to link to R Markdown files in the same directory subtree as the file on which `rmarkdown::run()` was invoked (e.g., you cannot link to `../foo.Rmd`). You can use the `dir` argument of `rmarkdown::run()` to indicate the directory to be treated as the root.
+Для изменения номера телефона, пожалуйста, используйте номер мобильного оператора другой страны для регистрации, после чего вы сможете изменить его на предпочитаемый номер.
 
-## Delayed rendering {#shiny-delay}
+<small>🛠️ KNOWLEDGE tuning \(скрипты\)</small>
 
-A Shiny document is typically rendered every time it is shown, and is not shown to the user until the rendering is complete. Consequently, a document that is large or contains expensive computations may take some time to load.
+Как указано в нашей базе знаний, номера телефонов определенных стран могут столкнуться с ограничениями относительно SMS-уведомлений от поставщиков услуг, которые мы используем. После успешной регистрации номер телефона можно будет изменить【9†source】.
 
-If your document contains interactive Shiny components that do not need to be rendered right away, you can wrap Shiny code in the `rmarkdown::render_delayed()` function. This function saves its argument until the document's rendering is done and has been shown to the user, then evaluates it and injects it into the output document when the computation is finished.
+> ACTIONS
 
-Here is an example that demonstrates how `render_delayed()` works. The code enclosed within the `render_delayed()` call will execute only after the document has been loaded and displayed to the user:
+- request data from the client (после регистрации запросить у клиента предпочитаемый номер для изменения)
 
-````markdown
-`r ''````{r, echo = FALSE}
-numericInput("rows", "How many cars?", 5)
+> SELFSCORING
 
-rmarkdown::render_delayed({
-  renderTable({
-    head(cars, input$rows)
-  })
-})
-```
-````
+★★★★★★★★☆☆
+<small> >>> 13. I can’t request a code for registration (the technical number is highlighted in red/is not sent). Customer indicated Yemen's phone number (+967...) Since phone numbers of Yemeni telecom operators are subject to restrictions on receiving SMS from the providers whose services we use SMS delivery with a one-time confirmation code cannot be carried out. In this case we recommend that you use the phone number of a mobile operator of another country. After successful registration you can change your number to the number of a Yemeni telecom operator
+</small>
 
-## Output arguments for render functions {#shiny-args}
+:::column-end:::
+:::row-end:::
 
-In a typical Shiny application, you specify an output element in the UI using functions like `plotOutput()` and `verbatimTextOutput()`, and render its content using functions like `renderPlot()` and `renderPrint()`.
+___
+> 🤨 hello there is a red message card is blocked by bank
 
-By comparison, in a Shiny document, the UI elements are often implicitly and automatically created when you call the `renderXXX()` functions. For example, you may want to use a `renderPlot()` function without having to create a `plotOutput()` slot beforehand. In this case, Shiny helpfully associates the corresponding output object to each `renderXXX()` function, letting you use Shiny code outside of a full Shiny app. However, some functionality can be lost in this process. In particular, `plotOutput()` can take in some optional arguments to set things like width and height, or allow you to click or brush over the plot (and store that information).
+:::row:::
+:::column:::
 
-To pass options from `renderXXX()` to `xxxOutput()`, you can use the `outputArgs` argument, if it is available to specific `renderXXX()` functions. For example, suppose that you want to render a plot and specify its width to be 200px and height to be 100px. Then you should use:
+🧑‍💼 Human
 
-````markdown
-`r ''````{r, echo = FALSE}
-renderPlot({
-  plot(yourData)
-}, outputArgs = list(width = "200px", height = "100px")
-)
-```
-````
+<small>💬 message</small>
 
-No matter how many output arguments you want to set (all the way from zero to all possible ones), `outputArgs` always takes in a list (the default is an empty list, which sets no output arguments). If you try to pass in a non-existent argument, you will get an error like the following message (in this example, you tried to set an argument named `not_an_argument`):
+     Hello! Please, specify the 4 last digits of the card.
+    :::column-end:::
+    :::column:::
+🧠  GPT
+     <small>💬 message</small>
 
-```markdown
-**Error**: Unused argument: in `outputArgs`, `not_an_argument`
-is not an valid argument for the output function
-```
+To address the issue of your blocked card, please provide the last 4 digits of the blocked card number.
 
-To see `outputArgs` in action, run the R Markdown document below or visit https://gallery.shinyapps.io/output-args/ for the live version online. The document is interactive: brush over the image and see the `xmin`, `xmax`, `ymin`, and `ymax` values change (printed right under the image).
+<small>🛠️ KNOWLEDGE tuning \(скрипты\)</small>
 
-````markdown
-`r xfun::file_string('examples/shiny-output-args.Rmd')`
-````
+"How do I unblock a card? The card is blocked by the bank. You cannot unblock the card yourself. Please specify the last 4 digits of the blocked card number."【9†source】
 
-### A caveat
+> ACTIONS
 
-We want to emphasize that you can only use this functionality within a Shiny R Markdown document (i.e., you must set `runtime: shiny` in the YAML metadata). But even if that is the case, this is only applicable to pieces of Shiny code that render output without the corresponding explicit output elements in the UI. If you embed a full Shiny application in your document and try to use `outputArgs`, it will be ignored and print the following warning to the R Markdown console (in this case, your `ui` function would be something like `ui = plotOutput("plot")`):
+- request data from the client (specify the last 4 digits of the blocked card number)
 
-```markdown
-Warning in `output$plot`(...) :
-Unused argument: outputArgs. The argument outputArgs is only
-meant to be used when embedding snippets of Shiny code in an
-R Markdown code chunk (using runtime: shiny). When running a
-full Shiny app, please set the output arguments directly in
-the corresponding output function of your UI code.
-```
+> SELFSCORING
 
-The same will happen if you try to use `outputArgs` in any other context, such as inside a regular (i.e., not embedded) Shiny app. The rationale is that if you are already specifying a `ui` function with all the `output` objects made explicit, you should set their arguments directly there instead of going through this round-about way.
+★★★★★★★★☆☆
+<small> >>> How do I unblock a card? The card is blocked by the bank. You cannot unblock the card yourself. Please specify the last 4 digits of the blocked card number
+</small>
+
+:::column-end:::
+:::row-end:::
+
+___
+> 🤨 Good afternoon
+
+some doubts on expenses recorded; on 02/01 700€ charged on card, up to today expenses for about 130€, found remaining 29,59€
+there’s something strange, may I have an explanation?
+Thanks
+
+:::row:::
+:::column:::
+
+🧑‍💼 Human
+
+<small>💬 message</small>
+
+     Dear customer, At the moment, our product is in high demand among existing and potential customers. Therefore, the reply may take up to 4 hours. We apologize for the inconvenience caused and thank you for understanding! Hello! Please, wait a few minutes. We thank you for waiting and being patient. Some questions take a little longer to be resolved. Please wait for our message. We will get back to you with the result as soon as we resolve your issue. Thank you for waiting. Dear customer, some transactions made with a payment card may not be displayed in the transaction history until we receive confirmation from the payment system for these transactions. As soon as we receive confirmation, you will see the needed transaction in the transaction history and you will be able to verify incoming and outgoing transactions and check the correctness of the displayed balance. May I assist you with anything else at the moment? In case you have further questions or requests, please contact us – we’ll be glad to help you. Have a nice day!
+    :::column-end:::
+    :::column:::
+🧠  GPT
+     <small>💬 message</small>
+
+To clarify your expenses, on 02/01 a charge of 700€ was made on your card. Including the current expenses which total approximately 130€, your remaining balance seems to be 29,59€. It is important to ensure that all transactions including charges, refunds, and pending transactions are accounted for. To fully understand the discrepancy, I suggest a review of your account's transaction history to track all activity that has affected your balance.
+
+<small>🛠️ KNOWLEDGE tuning \(скрипты\)</small>
+
+[Transactions taken into account for calculating expenses include purchases made in online stores and in walk-in stores, where payment is made using card details or a plastic card【11†source】].
+
+> ACTIONS
+
+- Obtain data from the banking system to review the monthly transactions for a detailed account statement which will clarify the expenses and current balance.
+- Request data from the client to confirm the dates and amounts of the transactions in question for a precise investigation.
+
+> SELFSCORING
+
+★★★★★★★★☆☆
+<small> >>> 08.11.2021 ""Refer a friend to Blackcatcard and you can both earn 30 35 or 45 EUR""." On what amount does my referral has to top-up their account with Binance Pay for me to receive the bonus? The account must be topped up in an amount of at least 30 euros total.
+Adv campaign and mass mailing to customers Adv campaign "08.11.2021 ""Refer a friend to Blackcatcard and you can both earn 30 35 or 45 EUR""." What bonus will I get for registering a referral with my promo code? "According to the new terms of the referral program from November 8 2021 you as the agent are not entitled to a bonus for registering a referral using your promo code.
+But you have the opportunity to receive a bonus in the amount of 35 euros for each of your referrals which will participate in the bonus program and make purchases with a card in the amount of at least 1000 euros within 2 (two) months after accepting the terms of the program.
+Please draw your attention that only your referral to whom the payment card has been opened can participate in the program. At the moment payment cards can only be opened for residents of EEA. "
+Adv campaign and mass mailing to customers Adv campaign "08.11.2021 ""Refer a friend to Blackcatcard and you can both earn 30 35 or 45 EUR""." What bonus will I receive if I wouldn’t be able to spend 1000 euros in 2 months? In order to receive a bonus of 40 euros you need to make purchases with a card amounting to at least 1000 euros within 2 months after the start of participation in the program. Unfortunately if this condition is not met you will not be able to receive the bonus.
+Adv campaign and mass mailing to customers Adv campaign "08.11.2021 ""Refer a friend to Blackcatcard and you can both earn 30 35 or 45 EUR""." What bonus will I receive if my referral did not manage to make purchases for 1000 euros in 2 months? Unfortunately you will not be able to receive a bonus if your referral has not fulfilled all the conditions of the referral program from the first time.
+Adv campaign and mass mailing to customers Adv campaign "08.11.2021 ""Refer a friend to Blackcatcard and you can both earn 30 35 or 45 EUR""." What conditions should I follow to receive a bonus in the amount of 40 euro? You must be subscribed to the loyalty program and spend at least EUR 1000 from your account on purchases in walk-in stores and/or online stores within 2 (two months) from the date you confirm your participation.
+Adv campaign and mass mailing to customers Adv campaign "08.11.2021 ""Refer a friend to Blackcatcard and you can both earn 30 35 or 45 EUR""." What conditions should I follow to receive a bonus in the amount of 40 euro? When calculating EUR 1000 expense we don't count internal and external money transfers; withdrawing cash from ATMs cash registers and any other retail outlets; operations with cryptocurrency; other cards top-ups using Blackcatcard fee for top up made from another card and the conversion margin on purchases/cash withdrawal made in local currency.
+Adv campaign and mass mailing to customers Adv campaign "08.11.2021 ""Refer a friend to Blackcatcard and you can both earn 30 35 or 45 EUR""." What do I need to do to get a promo code for inviting a friend? Customers who have an active account and are connected to one of the loyalty programs automatically receive a newsletter to invite friends.
+Adv campaign and mass mailing to customers Adv campaign "08.11.2021 ""Refer a friend to Blackcatcard and you can both earn 30 35 or 45 EUR""." What transactions are not taken into account when calculating the EUR 1000 expense? When calculating EUR 1000 expense we don't count internal and external money transfers; withdrawing cash from ATMs cash registers and any other retail outlets; operations with cryptocurrency; other cards top-ups using Blackcatcard fees and conversion margins.
+Adv campaign and mass mailing to customers Adv campaign "08.11.2021 ""Refer a friend to Blackcatcard and you can both earn 30 35 or 45 EUR""." What transactions are taken into account when calculating the EUR 1000 expense? "When calculating EUR 1000 expense we count purchases made in online stores and in walk-in stores i.e. those operations where you pay using your payment card details or a plastic card
+</small>
+
+:::column-end:::
+:::row-end:::
+
+___
+> 🤨 hello, can I close my account ?
+
+:::row:::
+:::column:::
+
+🧑‍💼 Human
+
+<small>💬 message</small>
+
+     Hello. Yes, for sure. Please hold on for a while. We kindly thank you for waiting. Dear customer, we would like to inform you that closing the account will automatically close all your cards. We kindly ask you to check the balance of your crypto wallet and withdraw or sell cryptocurrency if there is any available. Please notify us as soon as your crypto wallet balance is zero, so we will be able to proceed with the account closing procedure. Dear customer, since I haven't heard back from you in some time, I am going to close this chat. Please message us whenever it is convenient for you. We will be waiting for your response! Have a nice day!
+    :::column-end:::
+    :::column:::
+🧠  GPT
+     <small>💬 message</small>
+
+You can close your account at any time, and there is no fee for account closure.
+
+<small>🛠️ KNOWLEDGE tuning \(скрипты\)</small>
+
+"What is the fee for account closure? There is no fee for account closure."【9†source】.
+
+> ACTIONS
+
+- request data from the client (specify the reason for account closure)
+- refer the question to a specialist to proceed with the account closure
+
+> SELFSCORING
+
+★★★★★★★★☆☆
+<small> >>> What is the fee for account closure? There is no fee for account closure
+</small>
+
+:::column-end:::
+:::row-end:::
+
+___
+> 🤬 Добрый день! ответила на запрос по документам по электронной почте. Надеюсь на быстрое решение вопроса с зачислением средств на мой счет
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
